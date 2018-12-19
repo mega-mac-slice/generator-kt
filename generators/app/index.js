@@ -24,6 +24,12 @@ module.exports = class extends Generator {
         name: 'name',
         message: 'Application Name',
         default: dirName.charAt(0).toUpperCase() + dirName.substr(1)
+      },
+      {
+        type: 'input',
+        name: 'port',
+        message: 'Application Port',
+        default: 8080
       }
     ];
 
