@@ -1,4 +1,4 @@
-APP_NAME := pokegym
+APP_NAME := <%= name %>
 
 # Development
 clean:

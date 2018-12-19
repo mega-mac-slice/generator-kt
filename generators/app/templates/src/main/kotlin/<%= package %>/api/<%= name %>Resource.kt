@@ -1,4 +1,4 @@
-package pokegym.api
+package <%= package %>.api
 
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -7,7 +7,7 @@ import javax.ws.rs.Path
 
 @Singleton
 @Path("/api")
-class PokegymResource @Inject constructor() {
+class <%= name %>Resource @Inject constructor() {
     @GET
     @Path("hello")
     fun hello() : String {
