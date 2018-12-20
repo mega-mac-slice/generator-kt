@@ -50,6 +50,14 @@ module.exports = class extends Generator {
     );
   }
 
+  addDotFileTemplates() {
+    return this.fs.copyTpl(
+      this.templatePath('.*'),
+      this.destinationPath(),
+      {...this.props}
+    );
+  }
+
   gitDependencies() {
     this.spawnCommandSync('git', ['init']);
     this.spawnCommandSync('git', ['add', '.']);
