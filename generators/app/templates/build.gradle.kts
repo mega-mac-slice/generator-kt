@@ -1,3 +1,6 @@
+val dropwizardVersion = "1.3.5"
+val daggerVersion = "2.16"
+
 plugins {
     // Apply the Kotlin JVM plugin to add support for Kotlin on the JVM
     id("org.jetbrains.kotlin.jvm").version("1.3.10")
@@ -20,10 +23,10 @@ repositories {
 dependencies {
     // Use the Kotlin JDK 8 standard library
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("io.dropwizard:dropwizard-core:1.3.5")
+    implementation("io.dropwizard:dropwizard-core:$dropwizardVersion")
 
-    implementation("com.google.dagger:dagger:2.16")
-    kapt("com.google.dagger:dagger-compiler:2.16")
+    implementation("com.google.dagger:dagger:$daggerVersion")
+    kapt("com.google.dagger:dagger-compiler:$daggerVersion")
 
     // Use the Kotlin test library
     testImplementation("org.jetbrains.kotlin:kotlin-test")
@@ -35,6 +38,6 @@ dependencies {
 
 application {
     // Define the main class for the application
-    mainClassName = "<%= package %>.<%= name %>Application"
+    mainClassName = "pokegym.PokegymApplication"
 }
 
