@@ -38,6 +38,6 @@ dependencies {
 
 application {
     // Define the main class for the application
-    mainClassName = "pokegym.PokegymApplication"
+    mainClassName = "<%= package %>.<%= name %>Application"
 }
 
